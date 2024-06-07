@@ -7,6 +7,15 @@
 
 using namespace std;
 
+vo
+
+void loop(){
+    bool is_active{true};
+    SDL_Event event{};
+
+    while(is_active) handle_events(event, is_active)
+}
+
 int main(){
     //Si falla SLD_init() avisar
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0) throw runtime_error{"ERROR => SDL_init()"};
