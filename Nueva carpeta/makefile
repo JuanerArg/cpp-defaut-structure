@@ -14,7 +14,7 @@ INCLUDE_DIRECTORIES := -Iinclude
 # Directorios de las bibliotecas
 LIB_DIRECTORIES := -L
 # Archivos de las bibliotecas
-LIB_FILES := -l
+LIB_FILES := -lSDL2 -lSDL2main
 
 # Regla principal para generar el ejecutable "app"
 app: $(O_FILES)
@@ -31,3 +31,4 @@ res/%.o: res/%.rc
 # Regla para limpiar los archivos generados
 clean:
 	del /s /q src\*.o res\*.o app.exe
+
