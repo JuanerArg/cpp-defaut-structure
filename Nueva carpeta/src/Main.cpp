@@ -7,13 +7,23 @@
 
 using namespace std;
 
-vo
+void handle_events(SDL_Event *event, bool &is_active){
+    while(SDL_PollEvent(event)){
+        if(event -> type == SDL_QUIT) is_active = false;
+    }
+}
 
 void loop(){
     bool is_active{true};
     SDL_Event event{};
 
-    while(is_active) handle_events(event, is_active)
+    while(is_active) handle_events(&event, is_active);
+}
+
+void clear(SDL_Window *window, SDL_Renderer *renderer){
+    SDL_DestroyWindow(window);
+    SDL_DestroyRenderer(renderer);
+    SDL_Quit();
 }
 
 int main(){
@@ -29,5 +39,7 @@ int main(){
     
     //si falla el renderer avisar
     if(not renderer) throw runtime_error("ERROR => SDL_Renderer()");
-    return 0;
+
+    loop();
+    clear(window, renderer);
 }
