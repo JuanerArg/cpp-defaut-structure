@@ -10,11 +10,11 @@ COMPILED_FLAGS := -pedantic -W -Wall -O3
 # Flags para la etapa de enlazado
 LINKED_FLAGS := -s
 # Directorios de inclusión de archivos de cabecera
-INCLUDE_DIRECTORIES := -Iinclude
+INCLUDE_DIRECTORIES := -Iinclude\SDL2
 # Directorios de las bibliotecas
-LIB_DIRECTORIES := -L
+LIB_DIRECTORIES := -Llib
 # Archivos de las bibliotecas
-LIB_FILES := -lSDL2 -lSDL2main
+LIB_FILES := -lSDL2main -lSDL2
 
 # Regla principal para generar el ejecutable "app"
 app: $(O_FILES)
@@ -30,5 +30,5 @@ res/%.o: res/%.rc
 
 # Regla para limpiar los archivos generados
 clean:
-	del /s /q src\*.o res\*.o app.exe
+	rm -f src/*.o res/*.o app.exe
 
