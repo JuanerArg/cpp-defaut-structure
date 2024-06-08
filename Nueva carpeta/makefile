@@ -10,7 +10,7 @@ COMPILED_FLAGS := -pedantic -W -Wall -O3
 # Flags para la etapa de enlazado
 LINKED_FLAGS := -s
 # Directorios de inclusión de archivos de cabecera
-INCLUDE_DIRECTORIES := -Iinclude\SDL2
+INCLUDE_DIRECTORIES := -Iinclude
 # Directorios de las bibliotecas
 LIB_DIRECTORIES := -Llib
 # Archivos de las bibliotecas
@@ -31,4 +31,3 @@ res/%.o: res/%.rc
 # Regla para limpiar los archivos generados
 clean:
 	rm -f src/*.o res/*.o app.exe
-
