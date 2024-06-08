@@ -4,6 +4,8 @@
 #include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL.h>
 #include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL_events.h>
 #include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL_main.h>
+#include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL_video.h>
+#include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL_main.h>
 #include<stdexcept>
 
 
@@ -43,8 +45,5 @@ int main(){
     if(not renderer) throw runtime_error("ERROR => SDL_Renderer()");
 
     loop();
-    clear(window, renderer);
-}
-
     clear(window, renderer);
 }
