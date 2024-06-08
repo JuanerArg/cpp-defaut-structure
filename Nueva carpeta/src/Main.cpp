@@ -1,11 +1,7 @@
 #define SDL_MAIN_HANDLED "SDL_MAIN"
 
 #include<cstdlib>
-#include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL.h>
-#include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL_events.h>
-#include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL_main.h>
-#include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL_video.h>
-#include<E:\Proyects\OOP Proyects\Proyecto Ajedrez Cuantico\include\SDL_main.h>
+#include<SDL.h>
 #include<stdexcept>
 
 
@@ -22,7 +18,7 @@ void loop(){
     SDL_Event event{};
 
     while(is_active) handle_events(&event, is_active);
-}
+}   
 
 void clear(SDL_Window *window, SDL_Renderer *renderer){
     SDL_DestroyWindow(window);
